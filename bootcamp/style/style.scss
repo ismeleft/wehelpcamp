@@ -1,0 +1,175 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  // border: yellow 2px solid;
+}
+
+body {
+  background-color: #424c55;
+}
+
+div.animation {
+  background-color: #424c55;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+main {
+  width: 80%;
+  border: solid white 8px;
+  padding: 3rem;
+  display: flex;
+  margin: 0 auto;
+
+  div.left {
+    flex: 5;
+    border-right: #daddd8 1px solid;
+    padding: 1.5rem;
+  }
+  div.right {
+    flex: 5;
+    padding: 1.5rem;
+    padding-top: 150px;
+    position: relative;
+
+    div.decoration {
+      width: 300px;
+      height: 140px;
+      background: linear-gradient(135deg, #daddd8, #c7d59f);
+      border-radius: 70px 0px 0px 70px;
+      position: absolute;
+      right: -3rem;
+      top: 0rem;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  margin: 0rem 0.25rem;
+}
+
+a.btn {
+  padding: 0.5rem 1rem;
+  background-color: rgb(67, 98, 184);
+}
+
+hr {
+  border: none;
+  border-bottom: solid 4px #d8dbe2;
+  width: 40%;
+  margin-left: 0;
+}
+
+h1 {
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem;
+}
+h2 {
+  color: white;
+  font-size: 1.25rem;
+  padding: 1rem 0rem;
+}
+h2::after {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 5px;
+  background-color: #a9bcd0;
+  margin-left: 5px;
+}
+p {
+  color: white;
+  padding: 1.25rem 0rem;
+  line-height: 1.75rem;
+}
+
+#first {
+  stroke-dasharray: 722px;
+  stroke-dashoffset: 722px;
+  animation: fadeInside 0.6s ease-in forwards;
+}
+
+#second {
+  stroke-dasharray: 486px;
+  stroke-dashoffset: 486px;
+  animation: fadeInside 0.6s ease-in forwards 0.3s;
+}
+
+#third {
+  stroke-dasharray: 563px;
+  stroke-dashoffset: 563px;
+  animation: fadeInside 0.6s ease-in forwards 0.6s;
+}
+
+#fourth {
+  stroke-dasharray: 359px;
+  stroke-dashoffset: 359px;
+  animation: fadeInside 0.6s ease-in forwards 1.2s;
+}
+
+#fifth {
+  stroke-dasharray: 221px;
+  stroke-dashoffset: 221px;
+  animation: fadeInside 0.6s ease-in forwards 1.5s;
+}
+
+#sixth {
+  stroke-dasharray: 563px;
+  stroke-dashoffset: 563px;
+  animation: fadeInside 0.6s ease-in forwards 1.8s;
+}
+
+#seventh {
+  stroke-dasharray: 546px;
+  stroke-dashoffset: 546px;
+  animation: fadeInside 0.6s ease-in forwards 2.1s;
+}
+
+svg {
+  animation: fill 1s ease-in forwards 2.1s;
+}
+
+@keyframes fadeInside {
+  to {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+
+  to {
+    fill: white;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    width: 80%;
+    flex-wrap: wrap;
+    padding: 1rem;
+    div.left {
+      a.btn {
+        padding: 0.25rem 0.5rem;
+        margin-top: 4rem;
+      }
+    }
+    div.right {
+      border: none;
+      div.decoration {
+        display: none;
+      }
+    }
+  }
+}
