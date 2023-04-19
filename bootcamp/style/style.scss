@@ -60,6 +60,7 @@ a {
 a.btn {
   padding: 0.5rem 1rem;
   background-color: rgb(67, 98, 184);
+  border-radius: 10px;
 }
 
 hr {
@@ -156,17 +157,28 @@ svg {
 
 @media screen and (max-width: 768px) {
   main {
-    width: 80%;
+    width: 100%;
+    display: flex;
     flex-wrap: wrap;
     padding: 1rem;
+    border: none;
     div.left {
+      flex: 5;
+      padding: 1rem;
+      border: none;
+      img {
+        width: 300px;
+        height: 70px;
+      }
       a.btn {
         padding: 0.25rem 0.5rem;
         margin-top: 4rem;
       }
     }
     div.right {
-      border: none;
+      flex: 5;
+      padding: 1rem;
+
       div.decoration {
         display: none;
       }
