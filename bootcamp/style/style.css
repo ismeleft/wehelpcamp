@@ -76,6 +76,12 @@ a.btn {
   border-radius: 10px;
 }
 
+a.btn:hover {
+  cursor: pointer;
+  background-color: pink;
+  color: #424c55;
+}
+
 hr {
   border: none;
   border-bottom: solid 4px #d8dbe2;
